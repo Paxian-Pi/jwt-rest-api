@@ -31,7 +31,7 @@ public class DbInit implements CommandLineRunner {
         this.userRepository.deleteAll();
 
         // Save all to db
-        List<User> users = Arrays.asList(pax,wendy,matt,paxian,pep);
+        List<User> users = Arrays.asList(pax,wendy,pep,matt,paxian);
         this.userRepository.saveAll(users);
     }
 }
