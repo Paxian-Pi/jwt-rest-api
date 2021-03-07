@@ -15,13 +15,13 @@ public class User {
     private String username;
     private String password;
     private int active;
-    private String role = "";
+    private String roles = "";
     private String permissions = "";
 
-    public User(String username, String password, String role, String permissions) {
+    public User(String username, String password, String roles, String permissions) {
         this.username = username;
         this.password = password;
-        this.role = role;
+        this.roles = roles;
         this.permissions = permissions;
         this.active = 1;
     }
@@ -44,8 +44,8 @@ public class User {
         return active;
     }
 
-    public String getRole() {
-        return role;
+    public String getRoles() {
+        return roles;
     }
 
     public String getPermissions() {
@@ -53,8 +53,8 @@ public class User {
     }
 
     public List<String> getRoleList() {
-        if(this.role.length() > 0) {
-            return Arrays.asList(this.role.split(","));
+        if(this.roles.length() > 0) {
+            return Arrays.asList(this.roles.split(","));
         }
         return new ArrayList<>();
     }

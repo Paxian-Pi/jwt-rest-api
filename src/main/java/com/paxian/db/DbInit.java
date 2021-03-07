@@ -25,7 +25,7 @@ public class DbInit implements CommandLineRunner {
         User wendy = new User("wendy", passwordEncoder.encode("wendy123"),"ADMIN", "ACCESS_TEST1, ACCESS_TEST2");
         User pep = new User("pep", passwordEncoder.encode("pep123"),"ADMIN", "ACCESS_TEST1");
         User matt = new User("matt", passwordEncoder.encode("matt123"),"MANAGER", "ACCESS_TEST1");
-        User paxian = new User("paxian", passwordEncoder.encode("paxian123"),"MANAGER", "ACCESS_TEST1, ACCESS_TEST2");
+        User paxian = new User("paxian", passwordEncoder.encode("paxian123"),"ADMIN, MANAGER", "ACCESS_TEST1, ACCESS_TEST2");
 
         // Drop all users
         this.userRepository.deleteAll();
